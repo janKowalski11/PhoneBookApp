@@ -7,7 +7,6 @@ Date: 25.12.2018
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToMany;
-import javax.persistence.ManyToOne;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -18,11 +17,9 @@ public class Contact extends BaseEntity
     private String lastName;
     private Long number;
 
-    @ManyToOne
-    private PhoneBook phoneBook;
 
     @ManyToMany
-    private Set<Category> categories=new HashSet<>();
+    private Set<Category> categories = new HashSet<>();
 
     public String getFirstName()
     {
@@ -63,14 +60,6 @@ public class Contact extends BaseEntity
     {
         this.categories = categories;
     }
-
-    public PhoneBook getPhoneBook()
-    {
-        return phoneBook;
-    }
-
-    public void setPhoneBook(PhoneBook phoneBook)
-    {
-        this.phoneBook = phoneBook;
-    }
 }
+
+
