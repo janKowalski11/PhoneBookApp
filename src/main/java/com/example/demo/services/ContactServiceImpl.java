@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 @Service
@@ -40,5 +41,17 @@ public class ContactServiceImpl implements ContactService
         });
 
         return contactSet;
+    }
+
+    @Override
+    public Contact findById(Long id)
+    {
+        Optional<Contact> contactOptional = contactRepository.findById(id);
+        if (!contactOptional.isPresent())
+        {
+            throw new RuntimeException("Contact not found, it's id " + id);
+        }
+
+        return contactOptional.get();
     }
 }

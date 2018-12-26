@@ -12,4 +12,6 @@ public interface ContactService
 {
     Set<Contact> getContacts();
 
+    Contact findById(Long id);
+
 }

@@ -25,7 +25,8 @@ public class ContactController
     @GetMapping("/contact/{id}/show")
     public String showById(@PathVariable String id, Model model)
     {
-        //model.addAttribute("contact",contactService.)
-        return null;
+        model.addAttribute("contact",contactService.findById(Long.valueOf(id)));
+
+        return "contact/show";
     }
 }

@@ -8,6 +8,7 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 
 import java.util.HashSet;
+import java.util.Optional;
 import java.util.Set;
 
 import static org.junit.Assert.*;
@@ -43,6 +44,20 @@ public class ContactServiceImplTest
 
         assertEquals(1, contactService.getContacts().size());
         verify(contactRepository,times(1)).findAll();
+    }
 
+    @Test
+    public void testFindById()
+    {
+        Contact contact=new Contact();
+        contact.setId(1L);
+
+        when(contactRepository.findById(any())).thenReturn(Optional.of(contact));
+
+        Contact returnedContact=contactService.findById(1L);
+
+        assertNotNull(returnedContact);
+        assertEquals(contact.getId(), returnedContact.getId());
+        verify(contactRepository,times(1)).findById(any());
     }
 }
