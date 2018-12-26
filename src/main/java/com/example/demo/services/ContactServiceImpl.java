@@ -7,10 +7,12 @@ Date: 25.12.2018
 import com.example.demo.Model.Contact;
 import com.example.demo.Repositories.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.HashSet;
 import java.util.Set;
 
+@Service
 public class ContactServiceImpl implements ContactService
 {
 

@@ -1,31 +1,31 @@
 package com.example.demo.Controllers;
 /*
 Author: BeGieU
-Date: 25.12.2018
+Date: 26.12.2018
 */
 
 import com.example.demo.services.ContactService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 
 @Controller
-public class IndexController
+public class ContactController
 {
-
     private final ContactService contactService;
 
     @Autowired
-    public IndexController(ContactService contactService)
+    public ContactController(ContactService contactService)
     {
         this.contactService = contactService;
     }
 
-    @RequestMapping({"","/index","/"})
-    public String getIndexPage(Model model)
+    @GetMapping("/contact/{id}/show")
+    public String showById(@PathVariable String id, Model model)
     {
-        model.addAttribute("contacts",contactService.getContacts());
-        return "index";
+        //model.addAttribute("contact",contactService.)
+        return null;
     }
 }
