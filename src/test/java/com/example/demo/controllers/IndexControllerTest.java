@@ -1,6 +1,6 @@
-package com.example.demo.Controllers;
+package com.example.demo.controllers;
 
-import com.example.demo.Model.Contact;
+import com.example.demo.model.Contact;
 import com.example.demo.services.ContactService;
 import org.junit.Before;
 import org.junit.Test;

@@ -1,4 +1,4 @@
-package com.example.demo.Model;
+package com.example.demo.model;
 /*
 Author: BeGieU
 Date: 25.12.2018

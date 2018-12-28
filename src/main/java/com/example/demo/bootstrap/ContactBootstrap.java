@@ -1,13 +1,13 @@
-package com.example.demo.Bootstrap;
+package com.example.demo.bootstrap;
 /*
 Author: BeGieU
 Date: 26.12.2018
 */
 
-import com.example.demo.Model.Category;
-import com.example.demo.Model.Contact;
-import com.example.demo.Repositories.CategoryRepository;
-import com.example.demo.Repositories.ContactRepository;
+import com.example.demo.model.Category;
+import com.example.demo.model.Contact;
+import com.example.demo.repositories.CategoryRepository;
+import com.example.demo.repositories.ContactRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

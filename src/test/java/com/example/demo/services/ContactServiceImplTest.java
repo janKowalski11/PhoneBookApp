@@ -1,11 +1,15 @@
 package com.example.demo.services;
 
-import com.example.demo.Model.Contact;
-import com.example.demo.Repositories.ContactRepository;
+import com.example.demo.converters.ContactCommandToContact;
+import com.example.demo.converters.ContactToContactCommand;
+import com.example.demo.model.Contact;
+import com.example.demo.repositories.ContactRepository;
+import commands.ContactCommand;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.HashSet;
 import java.util.Optional;
@@ -22,13 +26,19 @@ public class ContactServiceImplTest
     @Mock
     ContactRepository contactRepository;
 
+    @Mock
+    ContactCommandToContact contactCommandToContact;
+
+    @Mock
+    ContactToContactCommand contactToContactCommand;
+
 
     @Before
     public void setUp() throws Exception
     {
         MockitoAnnotations.initMocks(this);
 
-        contactService = new ContactServiceImpl(contactRepository);
+        contactService = new ContactServiceImpl(contactRepository,contactCommandToContact,contactToContactCommand);
     }
 
     @Test
@@ -59,5 +69,18 @@ public class ContactServiceImplTest
         assertNotNull(returnedContact);
         assertEquals(contact.getId(), returnedContact.getId());
         verify(contactRepository,times(1)).findById(any());
+    }
+
+    @Test
+    public void testSaveCommand()
+    {
+        //given
+//        ContactCommand contactCommand=new ContactCommand();
+//        contactCommand.setId(1L);
+//
+//        when(contactService.saveCommand(any())).thenReturn(contactCommand);
+
+
+
     }
 }

@@ -42,12 +42,15 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <li th:each="contact: ${contact.categories}" th:text="${contact.description}">cat three</li>
+                                    <li th:each="contact: ${contact.categories}" >cat three</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
                 </div>
+                <form action="/">
+                    <button type="submit" class="btn btn-primary">Return</button>
+                </form>
             </div>
         </div>
     </div>

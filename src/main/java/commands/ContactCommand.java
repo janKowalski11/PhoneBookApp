@@ -1,25 +1,23 @@
-package com.example.demo.Model;
+package commands;
 /*
 Author: BeGieU
-Date: 25.12.2018
+Date: 26.12.2018
 */
 
+import com.example.demo.model.Category;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity
-public class Contact extends BaseEntity
+public class ContactCommand extends BasicCommand
 {
+
     private String firstName;
     private String lastName;
     private Long number;
 
+    private Set<CategoryCommand> categories = new HashSet<>();
 
-    @ManyToMany
-    private Set<Category> categories = new HashSet<>();
 
     public String getFirstName()
     {
@@ -51,15 +49,13 @@ public class Contact extends BaseEntity
         this.number = number;
     }
 
-    public Set<Category> getCategories()
+    public Set<CategoryCommand> getCategories()
     {
         return categories;
     }
 
-    public void setCategories(Set<Category> categories)
+    public void setCategories(Set<CategoryCommand> categories)
     {
         this.categories = categories;
     }
 }
-
-
