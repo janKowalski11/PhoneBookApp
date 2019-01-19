@@ -6,6 +6,7 @@ Date: 25.12.2018
 
 
 import javax.persistence.Entity;
+import javax.persistence.Lob;
 import javax.persistence.ManyToMany;
 import java.util.HashSet;
 import java.util.Set;
@@ -16,6 +17,8 @@ public class Contact extends BaseEntity
     private String firstName;
     private String lastName;
     private Long number;
+    @Lob
+    private Byte[] image;
 
 
     @ManyToMany
@@ -59,6 +62,16 @@ public class Contact extends BaseEntity
     public void setCategories(Set<Category> categories)
     {
         this.categories = categories;
+    }
+
+    public Byte[] getImage()
+    {
+        return image;
+    }
+
+    public void setImage(Byte[] image)
+    {
+        this.image = image;
     }
 }
 

@@ -42,6 +42,7 @@ public class ContactToContactCommand implements Converter<Contact, ContactComman
         contactCommand.setFirstName(source.getFirstName());
         contactCommand.setLastName(source.getLastName());
         contactCommand.setNumber(source.getNumber());
+        contactCommand.setImage(source.getImage());
 
         Set<Category> categories = source.getCategories();
         if (categories != null && categories.size() > 0)

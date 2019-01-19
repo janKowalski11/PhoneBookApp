@@ -25,6 +25,7 @@ public class ContactServiceImpl implements ContactService
     private final ContactCommandToContact toContact;
     private final ContactToContactCommand toContactCommand;
 
+    @Autowired
     public ContactServiceImpl(ContactRepository contactRepository, ContactCommandToContact toContact, ContactToContactCommand toContactCommand)
     {
         this.contactRepository = contactRepository;
@@ -63,7 +64,7 @@ public class ContactServiceImpl implements ContactService
     }
 
     @Override
-    @Transactional //todo ?? po co to jest tu
+    @Transactional
     public ContactCommand saveCommand(ContactCommand command)
     {
         System.out.println("\n\nsaveCommand COMMAND :  " + command);

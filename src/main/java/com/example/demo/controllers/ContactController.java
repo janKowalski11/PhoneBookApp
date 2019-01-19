@@ -35,7 +35,7 @@ public class ContactController
     {
         model.addAttribute("contact", new ContactCommand());
 
-        return "contact/contactform";
+        return "contact/contact_form";
     }
 
 
@@ -53,7 +53,7 @@ public class ContactController
         /* musimy podac command, bo commandy sluza do wypelnia przez uzytkownika we frontendzie
          * a zwykle do zapisu do bazy danych*/
         model.addAttribute("contact", contactService.findCommandById(Long.valueOf(id)));
-        return "contact/contactform";
+        return "contact/contact_form";
     }
 
     @GetMapping("contact/{id}/delete")

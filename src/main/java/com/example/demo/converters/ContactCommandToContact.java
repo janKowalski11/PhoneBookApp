@@ -4,7 +4,6 @@ Author: BeGieU
 Date: 26.12.2018
 */
 
-import com.example.demo.model.Category;
 import com.example.demo.model.Contact;
 import commands.CategoryCommand;
 import commands.ContactCommand;
@@ -43,6 +42,7 @@ public class ContactCommandToContact implements Converter<ContactCommand, Contac
         contact.setFirstName(source.getFirstName());
         contact.setLastName(source.getLastName());
         contact.setNumber(source.getNumber());
+        contact.setImage(source.getImage());
 
         Set<CategoryCommand> categoriesCommand = source.getCategories();
         if (categoriesCommand != null && categoriesCommand.size() > 0)

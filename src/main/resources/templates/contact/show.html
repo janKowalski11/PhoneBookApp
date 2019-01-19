@@ -23,7 +23,8 @@
             <div class="pannel-group">
                 <div class="panel panel-primary">
                     <div class="panel-heading">
-                        <h1 class="panel-title" th:text="${contact.firstName} +' '+ ${contact.lastName}">Jan Kowalski</h1>
+                        <h1 class="panel-title" th:text="${contact.firstName} +' '+ ${contact.lastName}">Jan
+                            Kowalski</h1>
                     </div>
                     <div class="panel-body">
                         <div class="row">
@@ -32,6 +33,11 @@
                             </div>
                             <div class="col-md-3">
                                 <p th:text="${contact.number }">112</p>
+                            </div>
+                            <div class="col-md-6">
+                                <img
+                                        th:src="@{'/contact/' + ${contact.id} + '/contact_image'}" th:method="get"
+                                        width="200" height="200">
                             </div>
                         </div>
                         <div class="row">
@@ -42,7 +48,7 @@
                                 <ul>
                                     <li th:remove="all">cat one</li>
                                     <li th:remove="all">cat two</li>
-                                    <li th:each="contact: ${contact.categories}" >cat three</li>
+                                    <li th:each="contact: ${contact.categories}">cat three</li>
                                 </ul>
                             </div>
                         </div>

@@ -15,6 +15,7 @@ public class ContactCommand extends BasicCommand
     private String firstName;
     private String lastName;
     private Long number;
+    private Byte[] image;
 
     private Set<CategoryCommand> categories = new HashSet<>();
 
@@ -57,5 +58,15 @@ public class ContactCommand extends BasicCommand
     public void setCategories(Set<CategoryCommand> categories)
     {
         this.categories = categories;
+    }
+
+    public Byte[] getImage()
+    {
+        return image;
+    }
+
+    public void setImage(Byte[] image)
+    {
+        this.image = image;
     }
 }
