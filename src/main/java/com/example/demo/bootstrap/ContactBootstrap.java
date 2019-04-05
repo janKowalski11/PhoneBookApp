@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -84,8 +83,8 @@ public class ContactBootstrap implements ApplicationListener<ContextRefreshedEve
 
         contactList.add(gussContact);
 
-        System.out.println("\n \n getContacts \n \n");
 
+        System.out.println();
         return contactList;
     }
 
