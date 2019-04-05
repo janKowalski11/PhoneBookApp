@@ -83,8 +83,6 @@ public class ContactBootstrap implements ApplicationListener<ContextRefreshedEve
 
         contactList.add(gussContact);
 
-
-        System.out.println();
         return contactList;
     }
 
