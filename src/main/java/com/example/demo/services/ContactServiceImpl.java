@@ -67,8 +67,6 @@ public class ContactServiceImpl implements ContactService
     @Transactional
     public ContactCommand saveCommand(ContactCommand command)
     {
-        System.out.println("\n\nsaveCommand COMMAND :  " + command);
-
         Contact detachedContact = toContact.convert(command);
 
         Contact savedContact = contactRepository.save(detachedContact);

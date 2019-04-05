@@ -50,8 +50,6 @@ public class ContactController
     @GetMapping("/contact/{id}/update")
     public String update(@PathVariable String id, Model model)
     {
-        /* musimy podac command, bo commandy sluza do wypelnia przez uzytkownika we frontendzie
-         * a zwykle do zapisu do bazy danych*/
         model.addAttribute("contact", contactService.findCommandById(Long.valueOf(id)));
         return "contact/contact_form";
     }

@@ -93,7 +93,5 @@ public class ContactBootstrap implements ApplicationListener<ContextRefreshedEve
     public void onApplicationEvent(ContextRefreshedEvent event)
     {
         contactRepository.saveAll(this.getContacts());
-
-        System.out.println("\n \n onApplicationEvent\n \n");
     }
 }
