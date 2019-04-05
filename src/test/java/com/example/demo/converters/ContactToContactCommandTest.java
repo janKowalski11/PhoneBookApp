@@ -2,14 +2,9 @@ package com.example.demo.converters;
 
 import com.example.demo.model.Category;
 import com.example.demo.model.Contact;
-import commands.CategoryCommand;
 import commands.ContactCommand;
 import org.junit.Before;
 import org.junit.Test;
-import org.omg.CORBA.NO_IMPLEMENT;
-
-import java.util.HashSet;
-import java.util.Set;
 
 import static org.junit.Assert.*;
 

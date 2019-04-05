@@ -4,18 +4,17 @@ import com.example.demo.converters.ContactCommandToContact;
 import com.example.demo.converters.ContactToContactCommand;
 import com.example.demo.model.Contact;
 import com.example.demo.repositories.ContactRepository;
-import commands.ContactCommand;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
-import org.springframework.web.bind.annotation.ModelAttribute;
 
 import java.util.HashSet;
 import java.util.Optional;
 import java.util.Set;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 import static org.mockito.Mockito.*;
 
 public class ContactServiceImplTest

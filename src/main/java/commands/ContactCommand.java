@@ -4,8 +4,6 @@ Author: BeGieU
 Date: 26.12.2018
 */
 
-import com.example.demo.model.Category;
-
 import java.util.HashSet;
 import java.util.Set;
 
